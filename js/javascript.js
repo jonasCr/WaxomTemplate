@@ -1,11 +1,74 @@
 $(function() {
 
+//Monstrar los elementos al scroll
+	
+	//Elementos a monstar
+	actividades=$('#actividades article');
+	imgBrowser=$('#browsers');
+	publicidad=$('#publicidad .container');
+	boxProyectos= $('#proyectos .box');
+	mobilTxt =$('#mobile-text');
+	boxNumero=$('.numeros');
+	boxPost=$('#recent-post .box');
+	partners= $('.partners');
+
+	$(window).scroll(function() {
+
+		//Monstrar cuando llego al elemento
+		documentScroll=$(document).scrollTop()+400;
+		if (documentScroll > actividades.offset().top) {
+			actividades.removeClass('invisible');
+			actividades.addClass('animated zoomIn');
+		}
+
+		if (documentScroll > imgBrowser.offset().top) {
+			imgBrowser.removeClass('invisible');
+			imgBrowser.addClass('animated zoomIn');
+		}
+
+		if (documentScroll > publicidad.offset().top) {
+			publicidad.removeClass('invisible');
+			publicidad.addClass('animated zoomIn');
+		}
+
+		if (documentScroll > boxProyectos.offset().top) {
+			boxProyectos.removeClass('invisible');
+			boxProyectos.addClass('animated zoomIn');
+		}
+
+		if (documentScroll > mobilTxt.offset().top) {
+			mobilTxt.removeClass('invisible');
+			mobilTxt.addClass('animated zoomIn');
+		}
+
+		if (documentScroll > boxNumero.offset().top) {
+			boxNumero.removeClass('invisible');
+			boxNumero.addClass('animated zoomIn');
+			//empezar a aumentar los numeros:
+			intervalClient= setInterval(aumentarNumeroClient, 100);
+			intervalCafe= setInterval(aumentarNumeroCafe, 100);
+			intervalClient= setInterval(aumentarNumeroClient, 100);
+			intervalBlog= setInterval(aumentarNumeroBlog, 100);
+			intervalLikes= setInterval(aumentarNumeroLikes, 100);
+		}
+
+		if (documentScroll > boxPost.offset().top) {
+			boxPost.removeClass('invisible');
+			boxPost.addClass('animated zoomIn');
+		}
+
+		if (documentScroll > partners.offset().top) {
+			partners.removeClass('invisible');
+			partners.addClass('animated zoomIn');
+		}
+	});
+
 // Cambiar el color de la nav al scroll
 
 	$(document).on('scroll', function() {
-		hola= $(document).scrollTop();
+		documentScrollNav= $(document).scrollTop();
 		anchoWindow= $(window).width();
-		if (hola>150 || anchoWindow < 780) {
+		if (documentScrollNav>150 || anchoWindow < 780) {
 			$('#main-nav').css({
 				background: '#4E3427',
 				transition: '1s'
@@ -60,21 +123,15 @@ $(function() {
 	spanBlog=$('#blog');
 	spanLikes=$('#likes');
 
-	intervalCafe= setInterval(aumentarNumeroCafe, 10)
-	intervalClient= setInterval(aumentarNumeroClient, 10)
-	intervalBlog= setInterval(aumentarNumeroBlog, 10)
-	intervalLikes= setInterval(aumentarNumeroLikes, 10)
-
+	
 	function aumentarNumeroCafe() {
 		if (inicioCafe<maxCafe) {
 			spanCafe.html(inicioCafe);
 			inicioCafe++;
 		}
-
 		else {
 			clearInterval(intervalCafe);
 		}
-		
 	}
 
 	function aumentarNumeroClient() {
@@ -93,27 +150,70 @@ $(function() {
 			spanBlog.html(inicioBlog);
 			inicioBlog++;
 		}
-
 		else {
 			clearInterval(intervalBlog);
 		}
-		
 	}
 	function aumentarNumeroLikes() {
 		if (inicioLikes<maxLikes) {
 			spanLikes.html(inicioLikes);
 			inicioLikes++;
 		}
-
 		else {
 			clearInterval(intervalLikes);
 		}
-		
 	}
-});
-
 
 
 // Monstrar los proyectos por categorias
 
+	//las categorias
+	allCategory=$('.category');
+	webdesignCategory=$('.web-design');
+	mobilAppCategory=$('.mobile-app');
+	illustracionCategory=$('.illustration');
+	photographyCategory=$('.photography');
+
+	//los enlaces {
+	enlaceAll=$('#all');
+	enlaceWeb=$('#web');
+	enlaceMobilApp=$('#mobile-app');
+	enlaceIllustration=$('#illustration');
+	enlacePhotography=$('#photography');
+
+	enlaceAll.on('click', function(event) {
+		event.preventDefault();
+		allCategory.show();
+	});
+
+	enlaceWeb.on('click', function(event) {
+		event.preventDefault();
+		allCategory.hide();
+		webdesignCategory.show();
+	});
+
+	enlaceMobilApp.on('click', function(event) {
+		event.preventDefault();
+		allCategory.hide();
+		mobilAppCategory.show();
+	});
+
+	enlaceIllustration.on('click', function(event) {
+		event.preventDefault();
+		allCategory.hide();
+		illustracionCategory.show();
+	});
+
+	enlacePhotography.on('click', function(event) {
+		event.preventDefault();
+		allCategory.hide();
+		photographyCategory.show();
+	});
+	
+});
+
+
+
 // Cargar 3 otros articulos
+
+

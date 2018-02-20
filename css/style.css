@@ -57,7 +57,7 @@ span {
 	display: inline-block;
 	text-decoration: none;
 	font-weight: bold;
-	padding: 1em 2em;
+	padding: 0.5em 1em;
 	text-transform: uppercase;
 	border-radius: 0.25em;
 	font-family: 'Roboto', sans-serif;
@@ -70,7 +70,12 @@ span {
 	transition: 0.5s;
 	text-decoration: none;
 }
+
+.invisible {
+	opacity: 0;
+}
  /*header*/
+
 header {
 	font-family: 'Raleway', sans-serif;
 }
@@ -105,6 +110,7 @@ header p {
 .carousel-control-next{
 	opacity: 1 !important;
 }
+
 
 /*Barra de navigation*/
 .gradient-background {
@@ -141,15 +147,7 @@ header p {
 	padding: 1em;
 }
 
-.nav-item:hover {
-	border-bottom: 0.25em #998675 solid !important;
-	margin-bottom: -0.3em;
-	transition: border-bottom 1s;
-}
 
-.nav-link:hover {
-	color: #998675 !important;
-}
 
 /*Seccion de las activades*/
 #actividades {
@@ -177,6 +175,7 @@ header p {
 }
 
 /*Seccion realizaciones*/
+
 #realizar_idea {
 	padding-bottom: 0;
 	margin-bottom: 0;
@@ -558,6 +557,19 @@ footer li:last-child {
 	border: none;
 }
 
+@media(min-width: 768px) {
+	.nav-item:hover {
+		border-bottom: 0.25em #998675 solid !important;
+		margin-bottom: -0.3em;
+		transition: border-bottom 1s;
+	}
+
+	.nav-link:hover {
+		color: #998675 !important;
+		transition: 1s;
+	}
+}
+
 @media (max-width: 768px){
 	body {
 		margin-top: 70px;
@@ -569,15 +581,6 @@ footer li:last-child {
 
 	#main-nav {
 		background: #998675;
-	}
-
-	.nav-link:hover {
-		color: white !important;
-	}
-
-	.nav-item:hover {
-		border-bottom: 0px transparent ;
-		margin-bottom: 0px;
 	}
 
 	.projects-link{
@@ -595,9 +598,8 @@ footer li:last-child {
 		color: white;
 	}
 
-	section {
-		padding-right: 2em;
-		padding-left: 2em;
+	section, #footer {
+		padding: 1em;
 	}
 }
 

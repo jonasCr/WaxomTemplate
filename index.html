@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Waxom Homepage</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<link href="img/logos.png" rel="shortcut icon">
@@ -39,13 +40,13 @@
 	            <img id="img-next" alt="Go To Next" src="img/right.png">
 	            <span class="sr-only">Next</span>
 	        </a>
-	        <div class="carousel-caption">
+	        <div class="carousel-caption d-flex justify-content-center">
 	            
 	            <div class="header-txt">
 	                <h2>Unique and Modern Design</h2>
 	                <h1>Portfolio PSD Template</h1>
 	                <p>Nam liber tempor cum soluta nobis eleifend option cngue nihil imperdiet doming id quod placerat facer possim assum</p>
-	                <a href="#" class="botones">GET STARTED</a>
+	                <a href="#" class="botones d-none d-md-inline-block">GET STARTED</a>
 	            </div>
 	        </div>
 	    </div>
@@ -78,33 +79,33 @@
 	<main>
 		<section class="container"  id="actividades">
 			<div class="row">
-				<article class="col-lg-3 col-md-6">
+				<article class="col-lg-3 col-md-6 invisible">
 					<p><i class="fas fa-pencil-alt fa-2x"></i></p>
 					<h4 class="title">Web & App Design</h4>
 					<p>Nam liber tempor cum slota nobis eleifend option congue nihil imperdiet doming id quod mazim</p>
 					<div class="border-abajo"></div>
 				</article>	
 				
-				<article class="col-lg-3 col-md-6">
+				<article class="col-lg-3 col-md-6 invisible">
 					<p><i class="fas fa-code fa-2x"></i></p>
 					<h4 class="title">Development</h4>
 					<p>Nam liber tempor cum slota nobis eleifend option congue nihil imperdiet doming id quod mazim</p>
 					<div class="border-abajo"></div>
 				</article>
 				
-				<article class="col-lg-3 col-md-6">
+				<article class="col-lg-3 col-md-6 invisible">
 					<p><i class="fas fa-cog fa-2x"></i></p>
 					<h4 class="title">Customization</h4>
 					<p>Nam liber tempor cum slota nobis eleifend option congue nihil imperdiet doming id quod mazim</p>
 					<div class="border-abajo"></div>
 				</article>
 				
-				<article class="col-lg-3 col-md-6">
+				<article class="col-lg-3 col-md-6 invisible">
 					<p><i class="fas fa-suitcase fa-2x"></i></p>
 					<h4 class="title">Marketing</h4>
 					<p>Nam liber tempor cum slota nobis eleifend option congue nihil imperdiet doming id quod mazim</p>
 					<div class="border-abajo"></div>
-				</article class="col-lg-3 col-md-6">
+				</article>
 			</div>
 
 		</section><!--Fin de la secion de las actividades-->
@@ -118,7 +119,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col" id="browsers">
+					<div class="col invisible" id="browsers">
 						<img src="img/browsers.png" alt="browsers">
 					</div>
 				</div>
@@ -127,14 +128,16 @@
 		<section id="publicidad">
 			<div class="container">
 				<div class="row align-baseline">
-					<div id="publicidad-txt" class="col-md-9">
+					<div id="publicidad-txt" class="col-md-8">
 						<h4><span>Waxon</span> Multipurpose WordPress Theme</h4>
 						<p>Don't Forget to Rate te 
 						Template. Thanks you so much!</p>
 					</div>
-					<div class="col-md-3 justify-content-center">
+					<div class="col-md-4 justify-content-center">
 						<a class="botones" href="#">Purchase now</a>
+					</div>
 				</div>
+			</div>
 		</section>
 		<!-- final de la seccion de publicidad -->
 
@@ -148,20 +151,20 @@
 					</div>
 				</div>
 				<nav id="nav-proyecto" class="row justify-content-center">
-					<a href="#" class="item_proyecto">All</a>
-					<a href="#" class="item_proyecto">Web Design</a>
-					<a href="#" class="item_proyecto">Mobile App</a>
-					<a href="#" class="item_proyecto">Illustration</a>
-					<a href="#" class="item_proyecto">Photography</a>
+					<a href="#" id="all">All</a>
+					<a href="#" id="web">Web Design</a>
+					<a href="#" id="mobile-app">Mobile App</a>
+					<a href="#" id="illustration">Illustration</a>
+					<a href="#" id="photography">Photography</a>
 				</nav>
 
 				<div class="row" id="proyectos">
-					<div class="col-md-4 col-sm-6">
-						<div class="box">
+					<div class="col-md-4 col-sm-6 category photography mobile-app">
+						<div class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/proyecto-1.png">
+								<img alt="proyecto1" class="img-efects" src="img/proyecto-1.png">
 							</div>
-							<img class="arrow" src="img/arrow.png">
+							<img alt="arrow" class="arrow" src="img/arrow.png">
 							
 							<div class="projects-link">
 								<a href="#"><i class="fas fa-link fa-lg"></i></a>
@@ -174,12 +177,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="box">
+					<div class="col-md-4 col-sm-6 category web-design illustration">
+						<div class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/proyecto-2.png">
+								<img alt="proyecto2" class="img-efects" src="img/proyecto-2.png">
 							</div>
-							<img class="arrow" src="img/arrow.png">
+							<img alt="arrow" class="arrow" src="img/arrow.png">
 							<div class="projects-link">
 								<a href="#"><i class="fas fa-link fa-lg"></i></a>
 								<a href="#"><i class="fas fa-search-plus fa-lg"></i></a>
@@ -190,12 +193,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="box">
+					<div class="col-md-4 col-sm-6 category photography illustration">
+						<div class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/proyecto-3.png">
+								<img alt="proyecto3" class="img-efects" src="img/proyecto-3.png">
 							</div>
-							<img class="arrow" src="img/arrow.png">
+							<img alt="arrow" class="arrow" src="img/arrow.png">
 							<div class="projects-link">
 								<a href="#"><i class="fas fa-link fa-lg"></i></a>
 								<a href="#"><i class="fas fa-search-plus fa-lg"></i></a>
@@ -206,12 +209,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="box">
+					<div class="col-md-4 col-sm-6 category mobile-app web-design">
+						<div class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/proyecto-4.png">
+								<img alt="proyecto4" class="img-efects" src="img/proyecto-4.png">
 							</div>
-							<img class="arrow" src="img/arrow.png">
+							<img alt="arrow" class="arrow" src="img/arrow.png">
 							<div class="projects-link">
 								<a href="#"><i class="fas fa-link fa-lg"></i></a>
 								<a href="#"><i class="fas fa-search-plus fa-lg"></i></a>
@@ -223,12 +226,12 @@
 
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="box">
+					<div class="col-md-4 col-sm-6 category web-design photography">
+						<div class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/proyecto-5.png">
+								<img alt="proyecto5" class="img-efects" src="img/proyecto-5.png">
 							</div>
-							<img class="arrow" src="img/arrow.png">
+							<img alt="arrow" class="arrow" src="img/arrow.png">
 							<div class="projects-link">
 								<a href="#"><i class="fas fa-link fa-lg"></i></a>
 								<a href="#"><i class="fas fa-search-plus fa-lg"></i></a>
@@ -240,12 +243,12 @@
 							
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="box">
+					<div class="col-md-4 col-sm-6 category mobile-app photography">
+						<div class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/proyecto-6.png">
+								<img alt="proyecto6" class="img-efects" src="img/proyecto-6.png">
 							</div>
-							<img class="arrow" src="img/arrow.png">
+							<img alt="arrow" class="arrow" src="img/arrow.png">
 							<div class="projects-link">
 								<a href="#"><i class="fas fa-link fa-lg"></i></a>
 								<a href="#"><i class="fas fa-search-plus fa-lg"></i></a>
@@ -280,16 +283,17 @@
 			            <p><span>04:17</span></p>
 
 			            <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-			              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-			                <div class="modal-content">
-			                    <div class="embed-responsive embed-responsive-16by9">
-			                        <iframe title="Video Title" class="embed-responsive-item" src="https://www.youtube.com/embed/9ZfN87gSjvI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-			                    </div>
+			            	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			                	<div class="modal-content">
+			                    	<div class="embed-responsive embed-responsive-16by9">
+			                        	<iframe title="Video Title" class="embed-responsive-item" src="https://www.youtube.com/embed/9ZfN87gSjvI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			                    	</div>
+			            		</div>
 			            	</div>
-			            </div>
-			        </div>
-		        </div>
-	        </div>
+			        	</div>
+		        	</div>
+	        	</div>
+			</div>
         </section>
 		<!-- Fin de la seccion video -->
 
@@ -297,9 +301,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4">
-						<img src="img/phone.png">
+						<img alt="phone" src="img/phone.png">
 					</div>
-					<div class="col-lg-8" id="mobile-text">
+					<div class="col-lg-8 invisible" id="mobile-text">
 						<h3>Excellent for Mobile Devices.</h3>
 						<p>Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
 						<ul>
@@ -317,7 +321,7 @@
 		<section class="" id="numbers">
 			<div class="container">
 				<div class="row">
-					<div class="col-6 col-md-3">
+					<div class="numeros col-6 col-md-3 invisible">
 						<div>
 							<p class="icon-numero"><i class="fas fa-users fa-3x"></i></p>
 							<p class="numero"><span id="clients"></span></p>
@@ -325,7 +329,7 @@
 							<div class="border-abajo"></div>
 						</div>
 					</div>
-					<div class="col-6 col-md-3">
+					<div class="numeros col-6 col-md-3 invisible">
 						<div>
 							<p class="icon-numero"><i class="fas fa-coffee fa-3x"></i></p>
 							<p class="numero"><span id="coffee"></span></p>
@@ -333,7 +337,7 @@
 							<div class="border-abajo"></div>
 						</div>
 					</div>
-					<div class="col-6 col-md-3">
+					<div class="numeros col-6 col-md-3 invisible">
 						<div>
 							<p class="icon-numero"><i class="far fa-comment fa-3x"></i></p>
 							<p class="numero"><span id="blog"></span></p>
@@ -341,12 +345,13 @@
 							<div class="border-abajo"></div>
 						</div>
 					</div>
-					<div class="col-6 col-md-3">
+					<div class="numeros col-6 col-md-3 invisible">
 						<div>
 							<p class="icon-numero"><i class="fas fa-heartbeat fa-3x"></i></p>
 							<p class="numero"><span id="likes"></span></p>
 							<p class="title-numero">Likes</p>
-						<div class="border-abajo"></div>
+							<div class="border-abajo"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -363,9 +368,9 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4">
-						<article class="box">
+						<article class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/recent-foot.png">
+								<img alt="post-recent" class="img-efects" src="img/recent-foot.png">
 							</div>
 							<div class="post-txt">
 								<h4>Lorem ipsum dolor sit amet</h4>
@@ -375,9 +380,9 @@
 						</article>
 					</div>
 					<div class="col-md-4">
-						<article class="box">
+						<article class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/recent-clavier.png">
+								<img alt="post-recent" class="img-efects" src="img/recent-clavier.png">
 							</div>
 							<div class="post-txt">
 								<h4>Lorem ipsum dolor sit amet</h4>
@@ -387,9 +392,9 @@
 						</article>
 					</div>
 					<div class="col-md-4">
-						<article class="box">
+						<article class="box invisible">
 							<div class="box-img">
-								<img class="img-efects" src="img/recent-boat.png">
+								<img alt="post-recent" class="img-efects" src="img/recent-boat.png">
 							</div>
 							<div class="post-txt">
 								<h4>Lorem ipsum dolor sit amet</h4>	
@@ -401,10 +406,10 @@
 				</div>
 			
 
-				<nav class="row justify-content-center">
+<!-- 				<nav class="row justify-content-center">
 					<button><i class="fas fa-chevron-circle-left fa-2x"></i></button>
 					<button><i class="fas fa-chevron-circle-right fa-2x"></i></button>
-				</nav>
+				</nav> -->
 			</div>
 		</section>
 		<!-- fin de la seccion recent post -->
@@ -413,16 +418,16 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 col-lg-3 text-center mb-4">
-						<img src="img/logo-01.png">
+						<img class="partners invisible" alt="logo partners" src="img/logo-01.png">
 					</div>
 					<div class="col-md-6 col-lg-3 text-center mb-4">
-						<img src="img/logo-02.png">
+						<img class="partners invisible" alt="logo partners" src="img/logo-02.png">
 					</div>
 					<div class="col-md-6 col-lg-3 text-center mb-4">
-						<img src="img/logo-03.png">
+						<img class="partners invisible" alt="logo partners" src="img/logo-03.png">
 					</div>
 					<div class="col-md-6 col-lg-3 text-center mb-4">
-						<img src="img/logo-04.png">
+						<img class="partners invisible" alt="logo partners" src="img/logo-04.png">
 					</div>
 				</div>
 			</div>
@@ -435,7 +440,7 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div>
-						<h4><img src="img/logos.png">Waxom</h4>
+						<h4><img alt="logo waxom" src="img/logos.png">Waxom</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -482,22 +487,22 @@
 						<div class="row">
 							<div class="col-6 mb-3">
 								<div>
-									<img class="dribbble" src="img/footer-1.png">
+									<img alt="image dribble" class="dribbble" src="img/footer-1.png">
 								</div>
 							</div>
 							<div class="col-6 mb-3">
 								<div>
-									<img class="dribbble" src="img/footer-2.png">
+									<img alt="image dribble" class="dribbble" src="img/footer-2.png">
 								</div>
 							</div>
 							<div class="col-6 mb-3">
 								<div>
-									<img class="dribbble" src="img/footer-3.png">
+									<img alt="image dribble" class="dribbble" src="img/footer-3.png">
 								</div>
 							</div>
 							<div class="col-6 mb-3">
 								<div>
-									<img class="dribbble" src="img/footer-4.png">
+									<img alt="image dribble" class="dribbble" src="img/footer-4.png">
 								</div>
 							</div>
 						</div>
@@ -530,7 +535,7 @@
 	</footer>
 	
 
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <script type="text/javascript" src="js/javascript.js"></script>
